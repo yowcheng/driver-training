@@ -1,0 +1,14 @@
+TARGET = drv_hello
+OBJS = drv_hello.o
+ifneq ($(KERNELRELEASE),)
+	 obj-m := $(TARGET).o
+else
+	 PWD  := $(shell pwd)
+	 KVER := $(shell uname -r)
+	 KDIR := /lib/modules/$(KVER)/build
+all:
+	 $(MAKE) -C $(KDIR) M=$(PWD)
+clean:
+	 -rm -f *.o *.ko .*.cmd .*.flags *.mod.c
+	 -include $(KDIR)/Rules.make
+endif

@@ -1,0 +1,7 @@
+http://fred-zone.blogspot.tw/2010/01/mouse-linux-kernel-driver.html
+
+cat /dev/input/mouse2
+就可以看到他的行為
+
+應該是要先 ls /dev/input 看看新增的是那個mouse！然後再使用 cat /dev/input/mouse1(or 2.......)
+我是的 /dev/input/mouse1

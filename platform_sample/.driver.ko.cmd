@@ -1,0 +1,1 @@
+cmd_/home/quanta/driver/platform_sample/driver.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.2.0-23-generic-pae/scripts/module-common.lds --build-id  -o /home/quanta/driver/platform_sample/driver.ko /home/quanta/driver/platform_sample/driver.o /home/quanta/driver/platform_sample/driver.mod.o
